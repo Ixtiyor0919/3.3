@@ -5,42 +5,74 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>3-uy ishi</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./css/bootstrap.min.css">
     <link rel="stylesheet" href="./css/normalize.css">
     <link rel="stylesheet" href="./css/main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
-    <header class="header container">
-        <h2 class="text-center mb-4">Movies catalog</h2>
+    <h1 class="visually-hidden">Movies catalog</h1>
+    <header class="header container container-lg container-md container-sm container-xl container-xxl mt-5 mb-5">
+        <h2 class="text-center mt-3 mb-3">Movies catalog</h2>
         <form action="index.html" class="form d-flex" method="get">
             <div class="w-50 me-5 d-flex flex-column">
-                <label for="form-label">
-                    <input name="" type="text" class="form-control mb-3" required>
+                <label for="form-text">
+                    <input name="text" type="text" class="form-control mb-3" id="form-text" required placeholder="ave">
                 </label>
-                <label for="form-label">
-                    <input name="" type="number" class="form-control mb-3" required>
+                <label for="form-number">
+                    <input name="form-number" type="number" class="form-control mb-3" id="form-number" required placeholder="5">
                 </label>
-                <select name="films" class="form-select mb-3" id="" placeholder="All">
-                    <option value="" selected checked>All</option>
+                <select name="films-all" class="form-select mb-3" id="films-all">
+                    <option value="0" selected>All</option>
                     <option value="1">Avengers</option>
                     <option value="1">Avengers</option>
                     <option value="1">Avengers</option>
                 </select>
-                <select name="films" class="form-select mb-3" id="" placeholder="All">
-                    <option value="" selected checked>Rating (high to low)</option>
+                <select name="films" class="form-select mb-3" id="films">
+                    <option value="0" selected>Rating (high to low)</option>
                     <option value="1">Avengers</option>
                     <option value="1">Avengers</option>
                     <option value="1">Avengers</option>
                 </select>
-                <button class="btn btn-primary mb-5" type="search">Search</button>
+                <label for="form-search-label" class="search-label">
+                    <input class="btn btn-primary mb-4 search w-100" id="form-search-label" type="search" placeholder="Search">
+                </label>
                 <h2>Bookmarked movies</h2>
+                <div class="card pt-3 pb-3 ps-4">
+                    <h3 class="card-title">Avengers:Infinity War</h3>
+                    <button class="col-4 btn btn-danger">Remove</button>
+                </div>
+                <div class="card pt-3 pb-3 ps-4">
+                    <h3 class="card-title">The Avengersr</h3>
+                    <button class="col-4 btn btn-danger">Remove</button>
+                </div>
+                <div class="card pt-3 pb-3 ps-4">
+                    <h3 class="card-title">12 Years a Slave</h3>
+                    <button class="col-4 btn btn-danger">Remove</button>
+                </div>
             </div>
             <div class="text-center">
-                <div class="d-flex">
+                <h3 class="title text-start">Search results: 39</h3>
+                <div class="alert alert-info text-start" role="alert">
+                    Use the form on the left to search for a movie
+                  </div>
+                <div class="d-flex text-start">
                     <div class="card w-75 me-4" style="width:18rem;">
                         <img src="./images/avengers.jpg"  class="card-img-top" alt="">
                         <div class="card-body">
                             <h4 class="card-title">Avengers:Infinity War</h4>
+                            <div class="d-flex align-items-baseline">
+                                <i class="fa-solid fa-calendar calendar me-2"></i>
+                                <p>2018</p>
+                            </div>
+                            <div class="d-flex align-items-baseline">
+                                <i class="fa-solid fa-star star me-2"></i>
+                                <p>8.7</p>
+                            </div>
                             <div class="card-group justify-content-around">
                                 <button type="button" class="btn btn-outline-primary">Watch trailer</button>
                                 <button type="button" class="btn btn-outline-info">More info</button>
@@ -51,8 +83,16 @@
                     <div class="card w-75" style="width:18rem;">
                         <img src="./images/avenger.jpg"  class="card-img-top" alt="">
                         <div class="card-body">
-                            <h4 class="card-title">Avengers:Infinity War</h4>
-                            <div class="card-group justify-content-around">
+                            <h4 class="card-title">The Avengers</h4>
+                            <div class="d-flex align-items-baseline">
+                                <i class="fa-solid fa-calendar calendar me-2"></i>
+                                <p>2012</p>
+                            </div>
+                            <div class="d-flex align-items-baseline">
+                                <i class="fa-solid fa-star star me-2"></i>
+                                <p>8.1</p>
+                            </div>
+                            <div class="card-group justify-content-around mb-1">
                                 <button type="button" class="btn btn-outline-primary">Watch trailer</button>
                                 <button type="button" class="btn btn-outline-info">More info</button>
                                 <button type="button" class="btn btn-outline-success">Bookmark</button>
@@ -61,10 +101,22 @@
                     </div>
                 </div>
                 <div class="btn-group mt-5" role="group" aria-label="First group">
-                    <button type="button" class="btn btn-outline-primary">1</button>
-                    <button type="button" class="btn btn-outline-primary">2</button>
-                    <button type="button" class="btn btn-outline-primary">3</button>
-                    <button type="button" class="btn btn-outline-primary">4</button>
+                    <nav aria-label="...">
+                        <ul class="pagination">
+                            <li class="page-item active">
+                                <a class="page-link" href="#">1</a>
+                            </li>
+                            <li class="page-item" aria-current="page">
+                                <a class="page-link" href="#">2</a>
+                            </li>
+                            <li class="page-item">
+                                <a class="page-link" href="#">3</a>
+                            </li>
+                            <li class="page-item">
+                                <a class="page-link" href="#">4</a>
+                        </li>
+                        </ul>
+                      </nav>
                 </div>
             </div>
         </form>
