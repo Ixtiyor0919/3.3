@@ -1,15 +1,74 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>3-uy ishi</title>
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/normalize.css">
+    <link rel="stylesheet" href="./css/main.css">
 </head>
-
 <body>
-    Scss template
+    <header class="header container">
+        <h2 class="text-center mb-4">Movies catalog</h2>
+        <form action="index.html" class="form d-flex" method="get">
+            <div class="w-50 me-5 d-flex flex-column">
+                <label for="form-label">
+                    <input name="" type="text" class="form-control mb-3" required>
+                </label>
+                <label for="form-label">
+                    <input name="" type="number" class="form-control mb-3" required>
+                </label>
+                <select name="films" class="form-select mb-3" id="" placeholder="All">
+                    <option value="" selected checked>All</option>
+                    <option value="1">Avengers</option>
+                    <option value="1">Avengers</option>
+                    <option value="1">Avengers</option>
+                </select>
+                <select name="films" class="form-select mb-3" id="" placeholder="All">
+                    <option value="" selected checked>Rating (high to low)</option>
+                    <option value="1">Avengers</option>
+                    <option value="1">Avengers</option>
+                    <option value="1">Avengers</option>
+                </select>
+                <button class="btn btn-primary mb-5" type="search">Search</button>
+                <h2>Bookmarked movies</h2>
+            </div>
+            <div class="text-center">
+                <div class="d-flex">
+                    <div class="card w-75 me-4" style="width:18rem;">
+                        <img src="./images/avengers.jpg"  class="card-img-top" alt="">
+                        <div class="card-body">
+                            <h4 class="card-title">Avengers:Infinity War</h4>
+                            <div class="card-group justify-content-around">
+                                <button type="button" class="btn btn-outline-primary">Watch trailer</button>
+                                <button type="button" class="btn btn-outline-info">More info</button>
+                                <button type="button" class="btn btn-outline-success">Bookmark</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card w-75" style="width:18rem;">
+                        <img src="./images/avenger.jpg"  class="card-img-top" alt="">
+                        <div class="card-body">
+                            <h4 class="card-title">Avengers:Infinity War</h4>
+                            <div class="card-group justify-content-around">
+                                <button type="button" class="btn btn-outline-primary">Watch trailer</button>
+                                <button type="button" class="btn btn-outline-info">More info</button>
+                                <button type="button" class="btn btn-outline-success">Bookmark</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="btn-group mt-5" role="group" aria-label="First group">
+                    <button type="button" class="btn btn-outline-primary">1</button>
+                    <button type="button" class="btn btn-outline-primary">2</button>
+                    <button type="button" class="btn btn-outline-primary">3</button>
+                    <button type="button" class="btn btn-outline-primary">4</button>
+                </div>
+            </div>
+        </form>
+    </header>
+    <script src="./js/bootstrap.min.js"></script>
 </body>
-
 </html>
